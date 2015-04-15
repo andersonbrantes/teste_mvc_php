@@ -7,12 +7,16 @@
 			case 'pages':
 				$controller = new PagesController();
 			break;
+			case 'posts':
+				$controller = new PostsController();
+			break;
 		}
 
 		$controller->{ $action }();
 	}
 
-	$controllers = array('pages' => ['home', 'error']);
+	$controllers = array('pages' => ['home', 'error'],
+											 'posts' -> ['index', 'show']);
 
 	if (array_key_exists($controller, $controllers)) {
 		if (in_array($action, $controllers[$controller])) {
