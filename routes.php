@@ -1,6 +1,6 @@
 <?php 
-	function call($controller, $action) {
 
+	function call($controller, $action) {
 		require_once('controllers/' . $controller . '_controller.php');
 
 		switch($controller) {
@@ -16,7 +16,7 @@
 	}
 
 	$controllers = array('pages' => ['home', 'error'],
-											 'posts' -> ['index', 'show']);
+											 'posts' => ['index', 'show']);
 
 	if (array_key_exists($controller, $controllers)) {
 		if (in_array($action, $controllers[$controller])) {
